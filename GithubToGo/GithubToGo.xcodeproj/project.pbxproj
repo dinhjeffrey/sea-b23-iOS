@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A23375F519F6CDF700EB5619 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23375F419F6CDF700EB5619 /* NetworkController.swift */; };
+		A23375F719F6E1EC00EB5619 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23375F619F6E1EC00EB5619 /* ReposViewController.swift */; };
 		A2C5B0F419F56BB40045C74E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C5B0F319F56BB40045C74E /* AppDelegate.swift */; };
 		A2C5B0F719F56BB40045C74E /* GithubToGo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2C5B0F519F56BB40045C74E /* GithubToGo.xcdatamodeld */; };
 		A2C5B0F919F56BB40045C74E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C5B0F819F56BB40045C74E /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A23375F419F6CDF700EB5619 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = ../NetworkController.swift; sourceTree = "<group>"; };
+		A23375F619F6E1EC00EB5619 /* ReposViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
 		A2C5B0EE19F56BB40045C74E /* GithubToGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubToGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C5B0F219F56BB40045C74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2C5B0F319F56BB40045C74E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,10 +85,12 @@
 		A2C5B0F019F56BB40045C74E /* GithubToGo */ = {
 			isa = PBXGroup;
 			children = (
+				A23375F419F6CDF700EB5619 /* NetworkController.swift */,
 				A2C5B0F319F56BB40045C74E /* AppDelegate.swift */,
 				A2C5B0F819F56BB40045C74E /* ViewController.swift */,
 				A2C5B0FA19F56BB40045C74E /* Main.storyboard */,
 				A2C5B11619F56FD80045C74E /* SplitContainerViewController.swift */,
+				A23375F619F6E1EC00EB5619 /* ReposViewController.swift */,
 				A2C5B0FD19F56BB40045C74E /* Images.xcassets */,
 				A2C5B0FF19F56BB40045C74E /* LaunchScreen.xib */,
 				A2C5B0F519F56BB40045C74E /* GithubToGo.xcdatamodeld */,
@@ -218,6 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23375F719F6E1EC00EB5619 /* ReposViewController.swift in Sources */,
+				A23375F519F6CDF700EB5619 /* NetworkController.swift in Sources */,
 				A2C5B0F919F56BB40045C74E /* ViewController.swift in Sources */,
 				A2C5B0F419F56BB40045C74E /* AppDelegate.swift in Sources */,
 				A2C5B0F719F56BB40045C74E /* GithubToGo.xcdatamodeld in Sources */,
@@ -415,6 +423,7 @@
 				A2C5B11219F56BB40045C74E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2C5B11319F56BB40045C74E /* Build configuration list for PBXNativeTarget "GithubToGoTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +432,7 @@
 				A2C5B11519F56BB40045C74E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -15,6 +15,7 @@ class SplitContainerViewController: UIViewController, UISplitViewControllerDeleg
         
         let splitVC = self.childViewControllers[0] as UISplitViewController
         splitVC.delegate = self
+        //splitVC.viewControllers[0]
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +25,7 @@ class SplitContainerViewController: UIViewController, UISplitViewControllerDeleg
     }
     
     func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController!, ontoPrimaryViewController primaryViewController: UIViewController!) -> Bool {
+        println("collapsing")
         return true
     }
     
