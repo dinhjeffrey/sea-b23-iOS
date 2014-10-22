@@ -1,0 +1,8 @@
+{
+  "private" : true,
+  "name" : "mongo-server",
+  "dependencies" : {
+    "express" : "3.3.4"
+  },
+  "version" : "0.0.1"
+}
