@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A213A34B19F9803A008A3B89 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A213A34A19F9803A008A3B89 /* StringExtension.swift */; };
 		A23375F519F6CDF700EB5619 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23375F419F6CDF700EB5619 /* NetworkController.swift */; };
 		A23375F719F6E1EC00EB5619 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23375F619F6E1EC00EB5619 /* ReposViewController.swift */; };
+		A23D5A0919F97A1D006808B9 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23D5A0819F97A1D006808B9 /* MenuTableViewController.swift */; };
+		A2413DBB19F96903001D7206 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2413DBA19F96903001D7206 /* WebViewController.swift */; };
 		A2C5B0F419F56BB40045C74E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C5B0F319F56BB40045C74E /* AppDelegate.swift */; };
 		A2C5B0F719F56BB40045C74E /* GithubToGo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2C5B0F519F56BB40045C74E /* GithubToGo.xcdatamodeld */; };
 		A2C5B0F919F56BB40045C74E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C5B0F819F56BB40045C74E /* ViewController.swift */; };
@@ -30,8 +33,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A213A34A19F9803A008A3B89 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		A23375F419F6CDF700EB5619 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = ../NetworkController.swift; sourceTree = "<group>"; };
 		A23375F619F6E1EC00EB5619 /* ReposViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
+		A23D5A0819F97A1D006808B9 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		A2413DBA19F96903001D7206 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		A2C5B0EE19F56BB40045C74E /* GithubToGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubToGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C5B0F219F56BB40045C74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2C5B0F319F56BB40045C74E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,9 @@
 				A2C5B0F319F56BB40045C74E /* AppDelegate.swift */,
 				A2C5B0F819F56BB40045C74E /* ViewController.swift */,
 				A2C5B0FA19F56BB40045C74E /* Main.storyboard */,
+				A213A34A19F9803A008A3B89 /* StringExtension.swift */,
+				A23D5A0819F97A1D006808B9 /* MenuTableViewController.swift */,
+				A2413DBA19F96903001D7206 /* WebViewController.swift */,
 				A2C5B11619F56FD80045C74E /* SplitContainerViewController.swift */,
 				A23375F619F6E1EC00EB5619 /* ReposViewController.swift */,
 				A2C5B0FD19F56BB40045C74E /* Images.xcassets */,
@@ -228,6 +237,9 @@
 				A23375F519F6CDF700EB5619 /* NetworkController.swift in Sources */,
 				A2C5B0F919F56BB40045C74E /* ViewController.swift in Sources */,
 				A2C5B0F419F56BB40045C74E /* AppDelegate.swift in Sources */,
+				A23D5A0919F97A1D006808B9 /* MenuTableViewController.swift in Sources */,
+				A213A34B19F9803A008A3B89 /* StringExtension.swift in Sources */,
+				A2413DBB19F96903001D7206 /* WebViewController.swift in Sources */,
 				A2C5B0F719F56BB40045C74E /* GithubToGo.xcdatamodeld in Sources */,
 				A2C5B11719F56FD80045C74E /* SplitContainerViewController.swift in Sources */,
 			);

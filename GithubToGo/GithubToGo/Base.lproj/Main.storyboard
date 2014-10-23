@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="hkJ-k7-vQU">
             <objects>
-                <viewController id="lhd-Ch-PaY" customClass="ViewController" customModule="GithubToGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lhd-Ch-PaY" customClass="WebViewController" customModule="GithubToGo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ceY-Pi-drc"/>
                         <viewControllerLayoutGuide type="bottom" id="VMv-do-N2N"/>
@@ -26,7 +26,7 @@
         <!--Root View Controller-->
         <scene sceneID="yGh-sB-BRy">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="fy8-qw-Bih" customClass="ReposViewController" customModule="GithubToGo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="fy8-qw-Bih" customClass="MenuTableViewController" customModule="GithubToGo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6YL-tR-8Q0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,6 +120,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="GiL-1E-gdt"/>
+                    <connections>
+                        <outlet property="searchBar" destination="QtC-M7-yBb" id="usE-NH-PIc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Il-lo-IAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

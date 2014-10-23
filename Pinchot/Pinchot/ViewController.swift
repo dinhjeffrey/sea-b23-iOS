@@ -25,6 +25,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var myObject : AnyObject!
+        
+        var number = 21
+        
+        switch number {
+        case 0:
+            myObject = "hello"
+        case 1:
+            myObject = 12
+        default:
+            println("hey")
+        }
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         self.title = "Images"        
