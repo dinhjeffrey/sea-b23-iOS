@@ -21,8 +21,13 @@ class MenuTableViewController: UITableViewController,UISearchBarDelegate {
         shouldChangeTextInRange range: NSRange,
         replacementText text: String) -> Bool {
             println(text)
+            
             return text.validate()
     }
     
+//    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+//        println("clicked")
+//    }
+//    
    
 }
