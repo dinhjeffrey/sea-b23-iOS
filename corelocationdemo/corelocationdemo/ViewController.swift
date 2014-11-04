@@ -17,6 +17,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "reminderAdded:", name: "REMINDER_ADDED", object: nil)
+        
         let longPress = UILongPressGestureRecognizer(target: self, action: "didLongPressMap:")
         self.mapView.addGestureRecognizer(longPress)
         self.locationManager.delegate = self
@@ -37,6 +39,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             println("default")
         }
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     func didLongPressMap(sender : UILongPressGestureRecognizer) {
@@ -71,6 +77,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
     }
     
+    func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
+        let renderer = MKCircleRenderer(overlay: overlay)
+        
+        renderer.fillColor = UIColor.purpleColor().colorWithAlphaComponent(0.20)
+        renderer.strokeColor = UIColor.blackColor()
+        
+        renderer.lineWidth = 1.0
+        renderer.lineDashPattern = [1,3]
+        
+        return renderer
+    }
+    
     func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
         println("great success!")
     }
@@ -97,9 +115,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func reminderAdded(notification : NSNotification) {
+        let userInfo = notification.userInfo!
+        let geoRegion = userInfo["region"] as CLCircularRegion
+        
+        let overlay = MKCircle(centerCoordinate: geoRegion.center, radius: geoRegion.radius)
+        self.mapView.addOverlay(overlay)
     }
 
 

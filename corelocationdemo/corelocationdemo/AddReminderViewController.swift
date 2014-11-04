@@ -17,16 +17,18 @@ class AddReminderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let regionSet = self.locationManager.monitoredRegions
-        let regions = regionSet.allObjects
+//        let regionSet = self.locationManager.monitoredRegions
+//        let regions = regionSet.allObjects
         
         // Do any additional setup after loading the view.
     }
 
     @IBAction func didPressAddReminderButton(sender: AnyObject) {
         
-        var geoRegion = CLCircularRegion(center: selectedAnnotation.coordinate, radius: 100.0, identifier: "TestRegion")
+        var geoRegion = CLCircularRegion(center: selectedAnnotation.coordinate, radius: 4000.0, identifier: "TestRegion")
         self.locationManager.startMonitoringForRegion(geoRegion)
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("REMINDER_ADDED", object: self, userInfo: ["region" : geoRegion])
         
         self.dismissViewControllerAnimated(true, completion: nil)
     }
