@@ -16,6 +16,9 @@
 		A20B33981A07FCD2001B261C /* corelocationdemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B33971A07FCD2001B261C /* corelocationdemoTests.swift */; };
 		A20B33A21A07FCDB001B261C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20B33A11A07FCDB001B261C /* MapKit.framework */; };
 		A20B33A41A080640001B261C /* AddReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B33A31A080640001B261C /* AddReminderViewController.swift */; };
+		A22D647E1A0A9F5F0012BF6E /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22D647D1A0A9F5F0012BF6E /* Reminder.swift */; };
+		A22D64801A0AA03B0012BF6E /* ReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22D647F1A0AA03B0012BF6E /* ReminderTableViewController.swift */; };
+		A22D64831A0AA39B0012BF6E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A22D64821A0AA39B0012BF6E /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,10 @@
 		A20B33971A07FCD2001B261C /* corelocationdemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = corelocationdemoTests.swift; sourceTree = "<group>"; };
 		A20B33A11A07FCDB001B261C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A20B33A31A080640001B261C /* AddReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReminderViewController.swift; sourceTree = "<group>"; };
+		A22D647D1A0A9F5F0012BF6E /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		A22D647F1A0AA03B0012BF6E /* ReminderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTableViewController.swift; sourceTree = "<group>"; };
+		A22D64811A0AA3770012BF6E /* corelocationdemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = corelocationdemo.entitlements; sourceTree = "<group>"; };
+		A22D64821A0AA39B0012BF6E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A20B33A21A07FCDB001B261C /* MapKit.framework in Frameworks */,
+				A22D64831A0AA39B0012BF6E /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +74,7 @@
 		A20B33701A07FCD2001B261C = {
 			isa = PBXGroup;
 			children = (
+				A22D64821A0AA39B0012BF6E /* CloudKit.framework */,
 				A20B33A11A07FCDB001B261C /* MapKit.framework */,
 				A20B337B1A07FCD2001B261C /* corelocationdemo */,
 				A20B33941A07FCD2001B261C /* corelocationdemoTests */,
@@ -85,13 +94,16 @@
 		A20B337B1A07FCD2001B261C /* corelocationdemo */ = {
 			isa = PBXGroup;
 			children = (
+				A22D64811A0AA3770012BF6E /* corelocationdemo.entitlements */,
 				A20B337E1A07FCD2001B261C /* AppDelegate.swift */,
 				A20B33831A07FCD2001B261C /* ViewController.swift */,
 				A20B33851A07FCD2001B261C /* Main.storyboard */,
+				A22D647F1A0AA03B0012BF6E /* ReminderTableViewController.swift */,
 				A20B33A31A080640001B261C /* AddReminderViewController.swift */,
 				A20B33881A07FCD2001B261C /* Images.xcassets */,
 				A20B338A1A07FCD2001B261C /* LaunchScreen.xib */,
 				A20B33801A07FCD2001B261C /* corelocationdemo.xcdatamodeld */,
+				A22D647D1A0A9F5F0012BF6E /* Reminder.swift */,
 				A20B337C1A07FCD2001B261C /* Supporting Files */,
 			);
 			path = corelocationdemo;
@@ -171,8 +183,12 @@
 				TargetAttributes = {
 					A20B33781A07FCD2001B261C = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 246U3NZ7Z2;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
 								enabled = 1;
 							};
 						};
@@ -231,6 +247,8 @@
 				A20B33841A07FCD2001B261C /* ViewController.swift in Sources */,
 				A20B33821A07FCD2001B261C /* corelocationdemo.xcdatamodeld in Sources */,
 				A20B337F1A07FCD2001B261C /* AppDelegate.swift in Sources */,
+				A22D647E1A0A9F5F0012BF6E /* Reminder.swift in Sources */,
+				A22D64801A0AA03B0012BF6E /* ReminderTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +373,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = corelocationdemo/corelocationdemo.entitlements;
 				INFOPLIST_FILE = corelocationdemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -365,7 +385,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = corelocationdemo/corelocationdemo.entitlements;
 				INFOPLIST_FILE = corelocationdemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -424,6 +446,7 @@
 				A20B339D1A07FCD2001B261C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A20B339E1A07FCD2001B261C /* Build configuration list for PBXNativeTarget "corelocationdemoTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +455,7 @@
 				A20B33A01A07FCD2001B261C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
